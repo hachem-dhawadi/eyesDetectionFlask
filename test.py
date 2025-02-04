@@ -310,7 +310,7 @@ def detect_eyes():
 @app.route('/')
 def home():
     return "Eye Detection Alert System Running!"
-
+#api for video feed
 @app.route('/video_feed')
 def video_feed():
     return Response(detect_eyes(), mimetype='multipart/x-mixed-replace; boundary=frame')

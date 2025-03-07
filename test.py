@@ -16,7 +16,7 @@ def detect_eyes():
         eyes = eye_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
         
         if len(eyes) < 2:
-            cv2.putText(frame, "ALERT: Eyes Closed!", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+            cv2.putText(frame, "ALERT: Eyes Closed! Open you eye", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
         else:
             # Limit detection to two eye boxes only
             eyes = sorted(eyes, key=lambda e: e[0])[:2]

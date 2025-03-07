@@ -46,8 +46,6 @@ if __name__ == '__main__':
 
 
 """   
-
-
 from flask import Flask, Response
 import cv2
 from deepface import DeepFace

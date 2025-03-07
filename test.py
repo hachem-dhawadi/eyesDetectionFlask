@@ -5,7 +5,6 @@ app = Flask(__name__)
 
 # Load OpenCV eye classifier
 eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_eye.xml")
-
 def detect_eyes():
     cap = cv2.VideoCapture(0)
     while True:
